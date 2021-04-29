@@ -34,9 +34,9 @@ export default class ViewAllBooking extends Component {
 
             const d = keys.map((b) => {
               return {
-                date: record[b].date,
-                endTime: record[b].endTime,
-                startTime: record[b].startTime,
+                date: new Date(record[b].date).toLocaleDateString(),
+                endTime: new Date(record[b].endTime).toLocaleString(),
+                startTime: new Date(record[b].startTime).toLocaleString(),
                 slotNo: record[b].slotNo,
                 LocationId: record[b].locationId,
                 locationName: record[b].locationName,
